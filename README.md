@@ -15,5 +15,5 @@
   ![The Stage](/pictures/MicroStage_V0.jpg)
   
 # License:
-See the LICENSE.txt file for copyright and conditions for re-use.
+See the LICENSE file for copyright and conditions for re-use.
 
