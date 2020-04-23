@@ -11,18 +11,34 @@ module Slot() {
    }
 }
 
+module ScrewSlot(screw_dia, head_dia, head_depth, driver_dia, height) {
+   // cut a slot (rather than a hole) in the riser block
+   // to hold the leadscrew.  The leadscrew head will "float"
+   // in the Z direction, relative to the slide to relieve
+   // binding.
+   //
+   // There are three parts: the slot for the leadscrew threaded
+   // part, the slot for the head, and the slot for the driver.
+   //
+   // For now, we'll do the metric M3 capscrew
+   //
+   // This slot is -- subtracted -- from the riser body.
+   
+   // The screw slot
+   translate([0, 0.5 * height, 0]) cube([screw_dia, height, height], center=true);
+   // the head slot
+   cube([head_dia, head_depth, height], center=true);   
+   // the driver slot
+   translate([0, -0.5 * height, 0]) cube([driver_dia, height, height], center=true);
+}
+
+
 module RiserBlock() {
    difference() {
      cube([RiserW, RiserD, RiserH], center=true);
      union() {
        translate([0,0,RiserLeadScrewCenter - 0.5 * RiserH]) {
-         union() {
-           rotate([90,0,0])
-             cylinder(d=RiserScrewHole,h=3*RiserD,center=true);
-	   translate([0,-0.4*RiserD,0])
-             rotate([90,0,0])
-    	       cylinder(d=RiserScrewHeadDia,h=0.5*RiserH);
-	 }
+         ScrewSlot(RiserScrewHole, HeadSlotM3, HeadDM3, ShankM3, RiserD * 3);
        }
      }
    }
@@ -36,13 +52,12 @@ module Base() {
        BaseBlock();	        
        union() { 
          translate([SlotSp * 1, 0, 0]) Slot();
-         translate([-SlotSp * 1, 0, 0]) Slot();	 
+         translate([-SlotSp * 1, 0, 0]) Slot();
+	 MountingHoles();
        }
    }
 }
 
 scale([25.4,25.4,25.4]) {
-  Base();
-
-  translate([0.5 * (BaseW + RiserW) + 0.1, 0,0.5*RiserD]) rotate([-90,0,0]) RiserBlock();
+ Base();
 }
