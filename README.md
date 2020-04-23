@@ -86,7 +86,28 @@ I bought from the "High Precision Machine Parts and Screen Door Company of Guang
 me with 50mm screws for a modest charge. I suspect you could make 
 similar arrangements. 
 
+# Q and A
 
-# License:
+#### Q: 
+Why a normal screw and not a threaded rod?
+#### A: 
+A threaded rod would be ideal, but small diameter threaded rod is hard to find. Much of the stuff you find on Amazon and other places will be threaded at the ends.  (I think the intended use is for servo linkages.)  One could thread a rod with things found around the house, but life expectancies being what they are, I can't see it myself. 
+
+#### Q:
+Will this work with ABS? PETG? Mother-of-pearl? 
+#### A:
+I haven't tried it.  Someone should. (Well, maybe not with mother-of-pearl.)
+
+#### Q:
+Why do this? 
+#### A: 
+I've got a 3D printer.  You've probably got a 3D printer.  How many tiny boats does one person *need*?
+
+#### Q:
+How can I prepare for an exciting career in the world of mobile pet grooming? 
+#### A:
+I can't help you there. 
+
+# License
 See the LICENSE file for copyright and conditions for re-use.
 
