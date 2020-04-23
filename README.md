@@ -2,7 +2,7 @@
 
   Micro-positioning stage. 
  
-  Author: radiogeek381@gmail.com
+  Author: Matt Reilly
 
   A simple sliding table that can be positioned via a 4-40 or M3 screw. 
   
