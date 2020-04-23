@@ -9,11 +9,16 @@
   It requires a 3D printer and a Flavia stick.  The stick is used for
   the linear bearing.  Other things might suffice, but I had some of
   these around.  
-  
+
+  This is what a Flavia stick looks like: 
   ![A Flavia Stick](/pictures/FlaviaStick.jpg)
   
+  This is a single-axis version of the micro positioning stage. 
   ![The Stage](/pictures/MicroStage_V1.jpg)
 
+  And here is an XY positioner.  
+  ![XY Positioner](/pictures/MicroStage_XY_V1.jpg)
+  
 # The Source
 
 The source for the components is in OpenSCAD (http://www.openscad.org). It 
@@ -88,25 +93,50 @@ similar arrangements.
 
 # Q and A
 
-#### Q: 
-Why a normal screw and not a threaded rod?
-#### A: 
-A threaded rod would be ideal, but small diameter threaded rod is hard to find. Much of the stuff you find on Amazon and other places will be threaded at the ends.  (I think the intended use is for servo linkages.)  One could thread a rod with things found around the house, but life expectancies being what they are, I can't see it myself. 
+**Q:** Why a normal screw and not a threaded rod?
 
-#### Q:
-Will this work with ABS? PETG? Mother-of-pearl? 
-#### A:
-I haven't tried it.  Someone should. (Well, maybe not with mother-of-pearl.)
+**A:** A threaded rod would be ideal, but small diameter threaded rod is hard to find. Much of the stuff you find on Amazon and other places will be threaded at the ends.  (I think the intended use is for servo linkages.)  One could thread a rod with things found around the house, but life expectancies being what they are, I can't see it myself. 
 
-#### Q:
-Why do this? 
-#### A: 
-I've got a 3D printer.  You've probably got a 3D printer.  How many tiny boats does one person *need*?
+**Q:** Why is it so small? 
 
-#### Q:
-How can I prepare for an exciting career in the world of mobile pet grooming? 
-#### A:
-I can't help you there. 
+**A:** I wanted this to be easy to print. This fits on every 3D printer that I know. 
+
+**Q:** How long will this take to print? 
+
+**A:** It all depends on your printer.  I printed both pieces on my well-worn Monoprice Select Plus at 0.15mm resolution in a little over 4 hours. 
+
+**Q:** Why a pocket for the lead screw head, rather than a hole. 
+
+**A:** Materials, variations in printer quality, phase of moon, and a 
+million other things conspire to make close tolerances hard to achieve with
+a typical home 3D printer.  Since
+the hole in the base block would need to line up pretty closely with the
+hole in the slide, all of those variations would need to be controlled. 
+Counting on that is just bad engineering. 
+
+When you hear someone say "the device is built to exacting tolerances: 
+every part must be *exactly* the right size" you are either hearing 
+* someone who is talking through their pants
+* a sales pitch for a luxury item whose cost and price appeal to a certain kind of person
+* a description of a precision device that you will never be able to afford
+* a story about crap engineering by people who are too lazy to think about reality and are willing to either endure lots of rejects at the end of the line, or are going to use you for "quality" control. 
+
+Good engineering will design within the capabilities of the technology and
+the properties of the material.  I'm not a professional Mech-E, but I respect
+them enough to at least *try*. 
+
+
+**Q:** Will this work with ABS? PETG? Mother-of-pearl? 
+
+**A:** I haven't tried it.  Someone should. (Well, maybe not with mother-of-pearl.)
+
+**Q:** Why do this? 
+
+**A:** I've got a 3D printer.  You've probably got a 3D printer.  How many tiny plastic boats does one person *need*?
+
+**Q:** How can I prepare for an exciting career in the world of mobile pet grooming? 
+
+**A:** I can't help you there. 
 
 # License
 See the LICENSE file for copyright and conditions for re-use.
